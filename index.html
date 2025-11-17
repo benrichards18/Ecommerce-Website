@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StyleAura</title>
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container">
+        <nav class="topbar__links">
+          <a href="#categories" class="nav-link">Categories</a>
+          <a href="#home" class="nav-link">Home</a>
+          <a href="#shop" class="nav-link">Shop</a>
+          <a href="#pages" class="nav-link">Pages</a>
+          <a href="#blogs" class="nav-link">Blogs</a>
+        </nav>
+        <div class="topbar__actions">
+          <button class="nav-link action-link" data-action="sell">Sell on StyleAura</button>
+          <button class="nav-link action-link" data-action="track">Track your order</button>
+          <button class="nav-link action-link" data-action="currency">US Dollar</button>
+          <button class="nav-link action-link" data-action="language">English</button>
+        </div>
+      </div>
+    </header>
+
+    <header class="main-header">
+      <div class="container">
+        <a href="#home" class="logo">Style<span>Aura</span></a>
+        <div class="search">
+          <input type="text" id="searchInput" placeholder="Search for items..." />
+          <button id="searchBtn">Search</button>
+        </div>
+        <div class="header-icons">
+          <button class="icon-btn" aria-label="Wishlist" id="wishlistBtn">
+            <span class="material-icons">favorite_border</span>
+          </button>
+          <button class="icon-btn" aria-label="Cart" id="cartBtn">
+            <span class="material-icons">shopping_cart</span>
+            <span class="badge" id="cartCount">0</span>
+          </button>
+          <button class="icon-btn" aria-label="User" id="loginBtn">
+            <span class="material-icons">person_outline</span>
+          </button>
+          <a href="#" class="login-link" id="loginLink">Login/Register</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="hero">
+        <div class="container hero__content">
+          <div class="hero__text">
+            <p class="version-label">Version 2025</p>
+            <h1>30% Discount</h1>
+            <p>
+              Discover the newest tech with powerful features – faster, lighter,
+              better, and cheaper.
+            </p>
+            <a href="#shop" class="primary-btn">Shop Now</a>
+          </div>
+          <div class="hero__image">
+            <img
+              src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80"
+              alt="Woman using VR headset"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="deals section" id="shop">
+        <div class="container">
+          <div class="section__header">
+            <h2>Today Deals</h2>
+            <button class="text-btn" id="viewAllBtn">View all</button>
+          </div>
+          <div class="products-grid" id="dealsGrid"></div>
+        </div>
+      </section>
+
+      <section class="perks">
+        <div class="container perks__grid">
+          <article>
+            <h3>Free Delivery</h3>
+            <p>Orders above $50 ship free worldwide.</p>
+          </article>
+          <article>
+            <h3>90 Days Return</h3>
+            <p>If the item has issues, return within 90 days.</p>
+          </article>
+          <article>
+            <h3>Secure Payment</h3>
+            <p>100% secure payment with SSL encryption.</p>
+          </article>
+          <article>
+            <h3>24/7 Support</h3>
+            <p>Dedicated support team for instant help.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="categories section" id="categories">
+        <div class="container">
+          <div class="section__header">
+            <h2>Popular Categories</h2>
+          </div>
+          <div class="category-grid">
+            <article class="category-card clickable" data-category="smartphones">
+              <h3>Smartphones</h3>
+              <p>Latest Android and iOS devices</p>
+            </article>
+            <article class="category-card clickable" data-category="appliances">
+              <h3>Home Appliances</h3>
+              <p>Upgrade your home with smart tech</p>
+            </article>
+            <article class="category-card clickable" data-category="gaming">
+              <h3>Gaming</h3>
+              <p>Consoles, accessories, and more</p>
+            </article>
+            <article class="category-card clickable" data-category="audio">
+              <h3>Audio</h3>
+              <p>Headphones, speakers, soundbars</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="featured section">
+        <div class="container">
+          <div class="section__header">
+            <h2>Featured Brands</h2>
+          </div>
+          <div class="brands">
+            <span>Apple</span>
+            <span>Samsung</span>
+            <span>Sony</span>
+            <span>Canon</span>
+            <span>Microsoft</span>
+            <span>Logitech</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="pages section" id="pages">
+        <div class="container">
+          <div class="section__header">
+            <h2>Quick Links</h2>
+          </div>
+          <div class="pages-grid">
+            <article class="page-card">
+              <h3>About Us</h3>
+              <p>Learn more about our mission and values</p>
+              <button class="text-btn page-link" data-page="about">Learn More →</button>
+            </article>
+            <article class="page-card">
+              <h3>Contact</h3>
+              <p>Get in touch with our support team</p>
+              <button class="text-btn page-link" data-page="contact">Contact Us →</button>
+            </article>
+            <article class="page-card">
+              <h3>FAQs</h3>
+              <p>Find answers to common questions</p>
+              <button class="text-btn page-link" data-page="faq">View FAQs →</button>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="blogs section" id="blogs">
+        <div class="container">
+          <div class="section__header">
+            <h2>Latest Blogs</h2>
+          </div>
+          <div class="blogs-grid">
+            <article class="blog-card">
+              <h3>Top 10 Tech Gadgets of 2025</h3>
+              <p>Discover the latest innovations that are changing the way we live and work.</p>
+              <button class="text-btn blog-link" data-blog="tech-gadgets">Read More →</button>
+            </article>
+            <article class="blog-card">
+              <h3>Smart Home Setup Guide</h3>
+              <p>Learn how to transform your home into a smart, connected space.</p>
+              <button class="text-btn blog-link" data-blog="smart-home">Read More →</button>
+            </article>
+            <article class="blog-card">
+              <h3>Gaming Console Comparison</h3>
+              <p>Find out which gaming console is right for you in 2025.</p>
+              <button class="text-btn blog-link" data-blog="gaming">Read More →</button>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="newsletter section">
+        <div class="container newsletter__content">
+          <div>
+            <h2>Get weekly deals in your inbox</h2>
+            <p>Subscribe to unlock exclusive coupons and early product drops.</p>
+          </div>
+          <form class="newsletter__form" id="newsletterForm">
+            <input
+              type="email"
+              id="newsletterEmail"
+              placeholder="Enter your email"
+              required
+            />
+            <button type="submit" class="primary-btn">Subscribe</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__grid">
+        <div>
+          <a href="#home" class="logo">Style<span>Aura</span></a>
+          <p>
+            StyleAura is your one-stop shop for premium electronics, gadgets,
+            and lifestyle accessories.
+          </p>
+        </div>
+        <div>
+          <h4>Customer Service</h4>
+          <ul>
+            <li><button class="footer-link" data-page="help">Help Center</button></li>
+            <li><button class="footer-link" data-page="returns">Returns & Refunds</button></li>
+            <li><button class="footer-link" data-action="track">Track Order</button></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><button class="footer-link" data-page="about">About Us</button></li>
+            <li><button class="footer-link" data-page="careers">Careers</button></li>
+            <li><button class="footer-link" data-page="press">Press</button></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p>support@styleaura.com</p>
+          <p>+1 (555) 123-4567</p>
+        </div>
+      </div>
+      <p class="footer__copy">&copy; <span id="year"></span> StyleAura. All rights reserved.</p>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2>Login / Register</h2>
+        <form id="loginForm">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" required />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" required />
+          </div>
+          <button type="submit" class="primary-btn">Login</button>
+          <p class="form-footer">
+            Don't have an account? <a href="#" id="registerLink">Register here</a>
+          </p>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+  </body>
+</html>
+
